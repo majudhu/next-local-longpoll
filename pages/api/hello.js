@@ -6,7 +6,7 @@ export default async function (req, res) {
       const start = new Date();
       while (
         messages.length <= parseInt(req.query.q) &&
-        new Date() - start < 25000
+        new Date() - start < 9000
       ) {
         await new Promise((r) => setTimeout(r, 100));
       }
